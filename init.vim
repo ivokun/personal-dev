@@ -31,6 +31,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " JS, TS, Vue
 Plug 'leafOfTree/vim-vue-plugin'
 Plug 'leafgarland/typescript-vim'
+Plug 'Quramy/tsuquyomi' 
+Plug 'jason0x43/vim-js-indent'
 
 call plug#end()
 
@@ -136,3 +138,4 @@ endif
 
 let g:vim_vue_plugin_use_typescript = 1
 let g:vim_vue_plugin_use_sass = 1
+let g:typescript_indent_disable = 1
