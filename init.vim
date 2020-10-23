@@ -33,6 +33,11 @@ Plug 'leafOfTree/vim-vue-plugin'
 Plug 'leafgarland/typescript-vim'
 Plug 'Quramy/tsuquyomi' 
 Plug 'jason0x43/vim-js-indent'
+Plug 'prettier/vim-prettier'
+
+" Clojure
+Plug 'Olical/conjure', {'tag': 'v4.5.0'}
+
 
 call plug#end()
 
@@ -138,4 +143,3 @@ endif
 
 let g:vim_vue_plugin_use_typescript = 1
 let g:vim_vue_plugin_use_sass = 1
-let g:typescript_indent_disable = 0
