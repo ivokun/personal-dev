@@ -52,6 +52,10 @@ set number
 set clipboard=unnamed
 set clipboard+=unnamedplus
 
+" Jumping between tabs
+nnoremap ( :tabprevious<CR>
+nnoremap ) :tabnext<CR>
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin Configs
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -110,6 +114,9 @@ nnoremap <Space>bh :FZF ~<CR>
 
 " === Coc.nvim === "
 set expandtab
+set tabstop=4
+set shiftwidth=4
+filetype plugin indent on
 syntax on
 syntax enable
 
