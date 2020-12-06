@@ -16,11 +16,17 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'scrooloose/nerdtree'
+Plug 'gcmt/taboo.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
+Plug 'camspiers/lens.vim'
+Plug 'tpope/vim-obsession'
 
 " Visualisation
 Plug 'airblade/vim-gitgutter'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'morhetz/gruvbox'
 
 " Python
 Plug 'Vimjas/vim-python-pep8-indent'
@@ -33,7 +39,7 @@ Plug 'leafOfTree/vim-vue-plugin'
 Plug 'leafgarland/typescript-vim'
 Plug 'Quramy/tsuquyomi' 
 Plug 'jason0x43/vim-js-indent'
-Plug 'prettier/vim-prettier'
+Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 
 " Clojure
 Plug 'Olical/conjure', {'tag': 'v4.5.0'}
@@ -63,7 +69,15 @@ nnoremap ) :tabnext<CR>
 " SuperTab
 " let g:SuperTabDefaultCompletionType = "<c-n>"
 
-let g:airline_theme='molokai'
+let g:airline_theme='gruvbox'
+
+""""""""""""""""""""""""""""""
+" GRUVBOX
+""""""""""""""""""""""""""""""
+let g:gruvbox_termcolors=16
+let g:gruvbox_contrast_dark = 'hard'
+colorscheme gruvbox
+set background=dark " Setting dark mode
 
 " Tmux Navigator
 if exists('$TMUX')
