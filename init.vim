@@ -162,5 +162,11 @@ else
   inoremap <silent><expr> <c-@> coc#refresh()
 endif
 
+" Make <CR> auto-select the first completion item and notify coc.nvim to
+" format on enter, <cr> could be remapped by other vim plugin
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
 let g:vim_vue_plugin_use_typescript = 1
 let g:vim_vue_plugin_use_sass = 1
+let g:python3_host_prog = "/usr/bin/python3"
