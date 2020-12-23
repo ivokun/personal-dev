@@ -21,6 +21,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 Plug 'camspiers/lens.vim'
 Plug 'tpope/vim-obsession'
+Plug 'francoiscabrol/ranger.vim'
+Plug 'rbgrouleff/bclose.vim'
 
 " Visualisation
 Plug 'airblade/vim-gitgutter'
@@ -37,6 +39,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " JS, TS, Vue
 Plug 'leafOfTree/vim-vue-plugin'
 Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
 Plug 'Quramy/tsuquyomi' 
 Plug 'jason0x43/vim-js-indent'
 Plug 'prettier/vim-prettier', { 'do': 'npm install' }
@@ -170,3 +173,21 @@ inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
 let g:vim_vue_plugin_use_typescript = 1
 let g:vim_vue_plugin_use_sass = 1
 let g:python3_host_prog = "/usr/bin/python3"
+
+" set filetypes as typescriptreact
+autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
+
+" dark red
+hi tsxTagName ctermfg=88
+hi tsxComponentName ctermfg=88
+hi tsxCloseComponentName ctermfg=88
+
+" orange
+hi tsxCloseString ctermfg=214
+hi tsxCloseTag ctermfg=214
+hi tsxCloseTagName ctermfg=214
+hi tsxAttributeBraces ctermfg=214
+hi tsxEqual ctermfg=214
+
+" yellow
+hi tsxAttrib ctermfg=100 cterm=italic
