@@ -23,6 +23,7 @@ Plug 'camspiers/lens.vim'
 Plug 'tpope/vim-obsession'
 Plug 'francoiscabrol/ranger.vim'
 Plug 'rbgrouleff/bclose.vim'
+Plug 'preservim/nerdcommenter'
 
 " Visualisation
 Plug 'airblade/vim-gitgutter'
@@ -126,8 +127,12 @@ let g:fzf_action = {
             \'enter': 'tabedit',
             \'ctrl-v': 'vsplit',
             \'ctrl-t': 'tabedit'}
-nnoremap <Space>be :FZF<CR>
-nnoremap <Space>bh :FZF ~<CR>
+nnoremap <Space>be :Files<CR>
+nnoremap <Space>bh :Files ~<CR>
+nnoremap <Space>ww :Windows<CR>
+
+" Ripgrep
+nnoremap <Space>rg :Rg<CR>
 
 " === Coc.nvim === "
 set expandtab
@@ -191,3 +196,31 @@ hi tsxEqual ctermfg=214
 
 " yellow
 hi tsxAttrib ctermfg=100 cterm=italic
+
+" NERD commenter
+" Create default mappings
+let g:NERDCreateDefaultMappings = 1
+
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+
+" Use compact syntax for prettified multi-line comments
+let g:NERDCompactSexyComs = 1
+
+" Align line-wise comment delimiters flush left instead of following code indentation
+let g:NERDDefaultAlign = 'left'
+
+" Set a language to use its alternate delimiters by default
+let g:NERDAltDelims_java = 1
+
+" Add your own custom formats or override the defaults
+let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
+
+" Allow commenting and inverting empty lines (useful when commenting a region)
+let g:NERDCommentEmptyLines = 1
+
+" Enable trimming of trailing whitespace when uncommenting
+let g:NERDTrimTrailingWhitespace = 1
+
+" Enable NERDCommenterToggle to check all selected lines is commented or not 
+let g:NERDToggleCheckAllLines = 1
