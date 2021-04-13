@@ -33,6 +33,7 @@ Plug 'morhetz/gruvbox'
 
 " Python
 Plug 'Vimjas/vim-python-pep8-indent'
+Plug 'nvie/vim-flake8'
 
 " Use release branch (recommend)
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -65,6 +66,10 @@ set clipboard+=unnamedplus
 " Jumping between tabs
 nnoremap ( :tabprevious<CR>
 nnoremap ) :tabnext<CR>
+
+" Vsplit current file
+nnoremap <Space>vv :vsplit<CR>
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin Configs

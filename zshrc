@@ -106,8 +106,8 @@ source $ZSH/oh-my-zsh.sh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Activates tmux session by default
-tmux attach &> /dev/null
-
-if [[ ! $TERM =~ screen ]]; then
-    exec tmux
-fi
+# tmux attach &> /dev/null
+#
+# if [[ ! $TERM =~ screen ]]; then
+    # exec tmux
+# fi
