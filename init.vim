@@ -142,7 +142,7 @@ nnoremap <Space>rg :Rg<CR>
 " === Coc.nvim === "
 set expandtab
 set tabstop=4
-set shiftwidth=4
+set shiftwidth=2
 filetype plugin indent on
 syntax on
 syntax enable
@@ -153,6 +153,23 @@ set hidden
 " Some servers have issues with backup files, see #649.
 set nobackup
 set nowritebackup
+
+let g:coc_global_extensions = [
+      \ 'coc-tsserver',
+      \ 'coc-css',
+      \ 'coc-html',
+      \ 'coc-sql',
+      \ 'coc-yaml',
+      \ 'coc-go',
+      \ 'coc-pyright',
+      \ ]
+
+if isdirectory('./node_modules') && isdirectory('./node_modules/prettier')
+  let g:coc_global_extensions += ['coc-prettier']
+endif
+if isdirectory('./node_modules') && isdirectory('./node_modules/eslint')
+  let g:coc_global_extensions += ['coc-eslint']
+endif
 
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
