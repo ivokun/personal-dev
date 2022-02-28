@@ -73,6 +73,7 @@ plugins=(
     you-should-use
     zsh-autosuggestions 
     zsh-syntax-highlighting
+    dotbare
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -111,3 +112,6 @@ source $ZSH/oh-my-zsh.sh
 # if [[ ! $TERM =~ screen ]]; then
     # exec tmux
 # fi
+
+# Added by Amplify CLI binary installer
+export PATH="$HOME/.amplify/bin:$PATH"

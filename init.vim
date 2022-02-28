@@ -24,16 +24,14 @@ Plug 'tpope/vim-obsession'
 Plug 'francoiscabrol/ranger.vim'
 Plug 'rbgrouleff/bclose.vim'
 Plug 'preservim/nerdcommenter'
+Plug 'APZelos/blamer.nvim'
+Plug 'hashivim/vim-terraform'
 
 " Visualisation
 Plug 'airblade/vim-gitgutter'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'morhetz/gruvbox'
-
-" Python
-Plug 'Vimjas/vim-python-pep8-indent'
-Plug 'nvie/vim-flake8'
 
 " Use release branch (recommend)
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -139,6 +137,9 @@ nnoremap <Space>ww :Windows<CR>
 " Ripgrep
 nnoremap <Space>rg :Rg<CR>
 
+" NerdTREE
+nnoremap <Space>nt :NERDTree<CR>
+
 " === Coc.nvim === "
 set expandtab
 set tabstop=4
@@ -160,8 +161,7 @@ let g:coc_global_extensions = [
       \ 'coc-html',
       \ 'coc-sql',
       \ 'coc-yaml',
-      \ 'coc-go',
-      \ 'coc-pyright',
+      \ 'coc-go'
       \ ]
 
 if isdirectory('./node_modules') && isdirectory('./node_modules/prettier')
@@ -246,3 +246,6 @@ let g:NERDTrimTrailingWhitespace = 1
 
 " Enable NERDCommenterToggle to check all selected lines is commented or not 
 let g:NERDToggleCheckAllLines = 1
+
+" Enable git blamer
+let g:blamer_enabled = 1
