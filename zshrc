@@ -1,5 +1,3 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -113,3 +111,17 @@ alias vi="nvim"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
+
+# Activates tmux session by default
+# tmux attach &> /dev/null
+#
+# if [[ ! $TERM =~ screen ]]; then
+    # exec tmux
+# fi
+
+# Added by Amplify CLI binary installer
+export PATH="$HOME/.amplify/bin:$PATH"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

@@ -26,6 +26,7 @@ Plug 'rbgrouleff/bclose.vim'
 Plug 'preservim/nerdcommenter'
 Plug 'APZelos/blamer.nvim'
 Plug 'hashivim/vim-terraform'
+Plug 'dhruvasagar/vim-table-mode'
 
 " Visualisation
 Plug 'airblade/vim-gitgutter'
