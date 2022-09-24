@@ -27,6 +27,7 @@ Plug 'preservim/nerdcommenter'
 Plug 'APZelos/blamer.nvim'
 Plug 'hashivim/vim-terraform'
 Plug 'dhruvasagar/vim-table-mode'
+Plug 'wuelnerdotexe/vim-astro'
 
 " Visualisation
 Plug 'airblade/vim-gitgutter'
