@@ -25,6 +25,7 @@ M.mason = {
     "css-lsp",
     "html-lsp",
     "typescript-language-server",
+    "eslint-lsp",
     "deno",
     "terraform-ls",
     "astro-language-server",
