@@ -12,6 +12,7 @@ M.treesitter = {
     "hcl",
     "astro",
     "svelte",
+    "prisma",
   },
 }
 
@@ -30,6 +31,7 @@ M.mason = {
     "terraform-ls",
     "astro-language-server",
     "svelte-language-server",
+    "prisma-language-server",
   },
 }
 
