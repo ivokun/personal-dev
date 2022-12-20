@@ -31,6 +31,7 @@ local sources = {
     },
     extra_filetypes = { "astro" },
   },
+  b.formatting.eslint_d,
 
   -- Lua
   b.formatting.stylua,
