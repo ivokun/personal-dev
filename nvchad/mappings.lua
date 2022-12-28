@@ -8,6 +8,12 @@ M.general = {
   },
 }
 
+M.nvimtree = {
+  n = {
+    ["<leader>fr"] = { "<cmd>NvimTreeToggle<cr>", "toggle file explorer" },
+  },
+}
+
 -- more keybinds!
 
 return M
