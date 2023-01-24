@@ -66,7 +66,7 @@ return {
 		config = function()
 			vim.api.nvim_create_autocmd({ "BufWritePre" }, {
 				pattern = { "*.tf", "*.tfvars" },
-				callback = vim.lsp.buf.formatting_sync,
+				callback = vim.lsp.buf.format,
 			})
 		end,
 	},
@@ -108,6 +108,15 @@ return {
 			vim.g.mkdp_echo_preview_url = 1
 			vim.g.mkdp_port = 7777
 			vim.g.mkdp_filetypes = { "markdown" }
+			require("vgit").setup()
+		end,
+	},
+
+	["tanvirtin/vgit.nvim"] = {
+		after = { "nvim-web-devicons" },
+		requires = { "nvim-lua/plenary.nvim" },
+		config = function()
+			require("vgit").setup()
 		end,
 	},
 	-- remove plugin
