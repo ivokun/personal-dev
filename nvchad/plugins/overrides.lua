@@ -13,6 +13,7 @@ M.treesitter = {
 		"astro",
 		"svelte",
 		"prisma",
+		"python",
 	},
 }
 
@@ -34,6 +35,8 @@ M.mason = {
 		"prisma-language-server",
 		"golangci-lint-langserver",
 		"golangci-lint",
+		"python-lsp-server",
+		"autopep8",
 	},
 }
 
