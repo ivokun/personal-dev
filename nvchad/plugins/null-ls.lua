@@ -47,6 +47,11 @@ local sources = {
 
 	b.diagnostics.golangci_lint,
 	b.formatting.gofmt,
+
+	-- python
+	b.diagnostics.flake8,
+	b.formatting.autopep8,
+	b.formatting.reorder_python_imports,
 }
 
 null_ls.setup({

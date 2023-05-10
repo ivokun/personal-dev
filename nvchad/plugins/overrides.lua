@@ -35,6 +35,7 @@ M.mason = {
 		"prisma-language-server",
 		"golangci-lint-langserver",
 		"golangci-lint",
+		"pyright",
 		"python-lsp-server",
 		"autopep8",
 	},
