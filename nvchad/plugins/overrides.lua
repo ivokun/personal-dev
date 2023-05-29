@@ -17,6 +17,7 @@ M.treesitter = {
 		"elixir",
 		"heex",
 		"eex",
+		"rust",
 	},
 }
 
@@ -42,6 +43,7 @@ M.mason = {
 		"python-lsp-server",
 		"autopep8",
 		"elixir-ls",
+		"rust-analyzer",
 	},
 }
 
@@ -64,7 +66,7 @@ M.nvimtree = {
 M.cmp = {
 	-- preselect = cmp.PreselectMode.None,
 	sources = {
-		{ name = "copilot" },
+		-- { name = "copilot" },
 		{ name = "nvim_lsp" },
 		{ name = "luasnip" },
 		{ name = "buffer" },

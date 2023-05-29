@@ -14,6 +14,7 @@ local servers = {
 	"golangci_lint_ls",
 	"pyright",
 	"elixirls",
+	"rust_analyzer",
 }
 
 for _, lsp in ipairs(servers) do
