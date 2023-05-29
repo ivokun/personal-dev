@@ -14,6 +14,9 @@ M.treesitter = {
 		"svelte",
 		"prisma",
 		"python",
+		"elixir",
+		"heex",
+		"eex",
 	},
 }
 
@@ -38,6 +41,7 @@ M.mason = {
 		"pyright",
 		"python-lsp-server",
 		"autopep8",
+		"elixir-ls",
 	},
 }
 
