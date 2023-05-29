@@ -21,10 +21,6 @@ return {
 		override_options = overrides.mason,
 	},
 
-	["kyazdani42/nvim-tree.lua"] = {
-		override_options = overrides.nvimtree,
-	},
-
 	["hrsh7th/nvim-cmp"] = {
 		override_options = overrides.cmp,
 	},
