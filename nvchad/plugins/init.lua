@@ -93,6 +93,14 @@ return {
 	-- 	end,
 	-- },
 
+	["tanvirtin/vgit.nvim"] = {
+		after = { "nvim-web-devicons" },
+		requires = { "nvim-lua/plenary.nvim" },
+		config = function()
+			require("vgit").setup()
+		end,
+	},
+
 	["iamcco/markdown-preview.nvim"] = {
 		run = "cd app && yarn install",
 		ft = { "markdown" },
@@ -104,17 +112,9 @@ return {
 			vim.g.mkdp_echo_preview_url = 1
 			vim.g.mkdp_port = 7777
 			vim.g.mkdp_filetypes = { "markdown" }
-			require("vgit").setup()
 		end,
 	},
 
-	["tanvirtin/vgit.nvim"] = {
-		after = { "nvim-web-devicons" },
-		requires = { "nvim-lua/plenary.nvim" },
-		config = function()
-			require("vgit").setup()
-		end,
-	},
 	-- remove plugin
 	-- ["hrsh7th/cmp-path"] = false,
 }

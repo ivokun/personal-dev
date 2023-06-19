@@ -13,7 +13,7 @@ local servers = {
 	"eslint",
 	"golangci_lint_ls",
 	"pyright",
-	"elixir-ls",
+	"elixirls",
 	"rust_analyzer",
 }
 
