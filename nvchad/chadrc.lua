@@ -1,8 +1,8 @@
 local M = {}
 
 M.ui = {
-	theme = "gruvbox_light",
-	theme_toggle = { "gruvbox", "gruvbox_light" },
+	theme = "gruvbox",
+	theme_toggle = { "gruvbox", "one_light" },
 }
 
 M.plugins = require("custom.plugins")
