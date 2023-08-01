@@ -67,31 +67,31 @@ return {
 		end,
 	},
 
-	-- ["zbirenbaum/copilot.lua"] = {
-	-- 	event = "VimEnter",
-	-- 	config = function()
-	-- 		vim.defer_fn(function()
-	-- 			require("copilot").setup({
-	-- 				suggestion = {
-	-- 					auto_trigger = true,
-	-- 					keymap = {
-	-- 						accept = "<Tab>",
-	-- 					},
-	-- 				},
-	-- 				cmp = {
-	-- 					enabled = true,
-	-- 					method = "getCompletionsCycling",
-	-- 				},
-	-- 			})
-	-- 		end, 100)
-	-- 	end,
-	-- },
-	-- ["zbirenbaum/copilot-cmp"] = {
-	-- 	after = { "copilot.lua" },
-	-- 	config = function()
-	-- 		require("copilot_cmp").setup()
-	-- 	end,
-	-- },
+	["zbirenbaum/copilot.lua"] = {
+		event = "VimEnter",
+		config = function()
+			vim.defer_fn(function()
+				require("copilot").setup({
+					suggestion = {
+						auto_trigger = true,
+						keymap = {
+							accept = "<Tab>",
+						},
+					},
+					cmp = {
+						enabled = true,
+						method = "getCompletionsCycling",
+					},
+				})
+			end, 100)
+		end,
+	},
+	["zbirenbaum/copilot-cmp"] = {
+		after = { "copilot.lua" },
+		config = function()
+			require("copilot_cmp").setup()
+		end,
+	},
 
 	["tanvirtin/vgit.nvim"] = {
 		after = { "nvim-web-devicons" },
