@@ -137,6 +137,7 @@ export FZF_DEFAULT_COMMAND="rg --files\
                             "
 export FZF_TMUX=1
 export FZF_TMUX_HEIGHT=20
+export LANG=en_US.UTF-8 LC_CTYPE=en_US.UTF-8
 
 
 source "$HOME/.cargo/env"
