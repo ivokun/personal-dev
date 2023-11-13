@@ -1,14 +1,46 @@
-return {
+local plugins = {
 
-	-- ["goolord/alpha-nvim"] = { disable = false } -- enables dashboard
+	{ "elkowar/yuck.vim", lazy = false }, -- load a plugin at startup
 
-	-- Override plugin definition options
-	-- ["neovim/nvim-lspconfig"] = {
-	-- 	config = function()
-	-- 		require("plugins.configs.lspconfig")
-	-- 		require("custom.plugins.lspconfig")
-	-- 	end,
+	-- You can use any plugin specification from lazy.nvim
+	{
+		"Pocco81/TrueZen.nvim",
+		cmd = { "TZAtaraxis", "TZMinimalist" },
+		config = function()
+			require("custom.configs.truezen") -- just an example path
+		end,
+	},
+
+	-- this opts will extend the default opts
+	-- {
+	-- 	"nvim-treesitter/nvim-treesitter",
+	-- 	opts = {
+	-- 		ensure_installed = { "html", "css", "bash" },
+	-- 	},
 	-- },
+
+	{
+		"folke/which-key.nvim",
+		enabled = false,
+	},
+
+	-- If your opts uses a function call, then make opts spec a function*
+	-- should return the modified default config as well
+	-- here we just call the default telescope config
+	-- and then assign a function to some of its options
+	{
+		"nvim-telescope/telescope.nvim",
+		opts = function()
+			local conf = require("plugins.configs.telescope")
+			conf.defaults.mappings.i = {
+				["<C-j>"] = require("telescope.actions").move_selection_next,
+				["<Esc>"] = require("telescope.actions").close,
+			}
+
+			return conf
+		end,
+	},
+
 	{
 		"neovim/nvim-lspconfig",
 		config = function()
@@ -24,25 +56,25 @@ return {
 	{
 		"nvim-treesitter/nvim-treesitter",
 		opts = {
-	ensure_installed = {
-		"vim",
-		"lua",
-		"html",
-		"css",
-		"typescript",
-		"javascript",
-		"c",
-		"hcl",
-		"astro",
-		"svelte",
-		"prisma",
-		"python",
-		"elixir",
-		"heex",
-		"eex",
-		"rust",
-	},
-    },
+			ensure_installed = {
+				"vim",
+				"lua",
+				"html",
+				"css",
+				"typescript",
+				"javascript",
+				"c",
+				"hcl",
+				"astro",
+				"svelte",
+				"prisma",
+				"python",
+				"elixir",
+				"heex",
+				"eex",
+				"rust",
+			},
+		},
 	},
 
 	-- ["williamboman/mason.nvim"] = {
@@ -52,30 +84,30 @@ return {
 		"williamboman/mason.nvim",
 		opts = {
 
-	ensure_installed = {
-		-- lua stuff
-		"lua-language-server",
-		"stylua",
+			ensure_installed = {
+				-- lua stuff
+				"lua-language-server",
+				"stylua",
 
-		-- web dev stuff
-		"css-lsp",
-		"html-lsp",
-		"typescript-language-server",
-		"eslint-lsp",
-		"deno",
-		"terraform-ls",
-		"astro-language-server",
-		"svelte-language-server",
-		"prisma-language-server",
-		"golangci-lint-langserver",
-		"golangci-lint",
-		"pyright",
-		"python-lsp-server",
-		"autopep8",
-		"elixir-ls",
-		"rust-analyzer",
-	},
-    },
+				-- web dev stuff
+				"css-lsp",
+				"html-lsp",
+				"typescript-language-server",
+				"eslint-lsp",
+				"deno",
+				"terraform-ls",
+				"astro-language-server",
+				"svelte-language-server",
+				"prisma-language-server",
+				"golangci-lint-langserver",
+				"golangci-lint",
+				"pyright",
+				"python-lsp-server",
+				"autopep8",
+				"elixir-ls",
+				"rust-analyzer",
+			},
+		},
 	},
 
 	-- ["hrsh7th/nvim-cmp"] = {
@@ -94,7 +126,7 @@ return {
 	-- 	end,
 	-- },
 	{
-		"max397574/better_escape.nvim",
+		"max397574/better-escape.nvim",
 		event = "InsertEnter",
 		config = function()
 			require("better_escape").setup()
@@ -108,13 +140,14 @@ return {
 	-- 		require("custom.plugins.null-ls")
 	-- 	end,
 	-- },
-	-- {
-	-- 	"jose-elias-alvarez/null-ls.nvim",
-	-- 	after = "nvim-lspconfig",
-	-- 	config = function()
-	-- 		require("custom.plugins.null-ls")
-	-- 	end,
-	-- },
+	{
+		"jose-elias-alvarez/null-ls.nvim",
+		after = "nvim-lspconfig",
+		lazy = false,
+		config = function()
+			require("custom.configs.null-ls")
+		end,
+	},
 
 	-- ["alexghergh/nvim-tmux-navigation"] = {
 	-- 	config = function()
@@ -215,7 +248,7 @@ return {
 	-- 	end,
 	-- },
 	{
-		"zbirenbaum/copilot_cmp",
+		"zbirenbaum/copilot-cmp",
 		after = { "copilot.lua" },
 		config = function()
 			require("copilot_cmp").setup()
@@ -278,3 +311,5 @@ return {
 		enabled = false,
 	},
 }
+
+return plugins
