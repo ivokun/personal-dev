@@ -9,6 +9,11 @@ M.general = {
 		["<C-l>"] = { "<Cmd>NvimTmuxNavigateRight<Cr>", "Move right window" },
 		["<C-j>"] = { "<Cmd>NvimTmuxNavigateDown<Cr>", "Move down window" },
 		["<C-k>"] = { "<Cmd>NvimTmuxNavigateUp<Cr>", "Move up window" },
+		["<leader>tt"] = {
+			function()
+				require("base46").toggle_theme()
+			end,
+		},
 	},
 }
 
