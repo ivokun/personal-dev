@@ -2,32 +2,11 @@ local plugins = {
 
 	{ "elkowar/yuck.vim", lazy = false }, -- load a plugin at startup
 
-	-- You can use any plugin specification from lazy.nvim
-	{
-		"Pocco81/TrueZen.nvim",
-		cmd = { "TZAtaraxis", "TZMinimalist" },
-		config = function()
-			require("custom.configs.truezen") -- just an example path
-		end,
-	},
-
-	-- this opts will extend the default opts
-	-- {
-	-- 	"nvim-treesitter/nvim-treesitter",
-	-- 	opts = {
-	-- 		ensure_installed = { "html", "css", "bash" },
-	-- 	},
-	-- },
-
 	{
 		"folke/which-key.nvim",
 		enabled = false,
 	},
 
-	-- If your opts uses a function call, then make opts spec a function*
-	-- should return the modified default config as well
-	-- here we just call the default telescope config
-	-- and then assign a function to some of its options
 	{
 		"nvim-telescope/telescope.nvim",
 		opts = function()
@@ -49,10 +28,6 @@ local plugins = {
 		end,
 	},
 
-	-- overrde plugin configs
-	-- ["nvim-treesitter/nvim-treesitter"] = {
-	-- 	override_options = overrides.treesitter,
-	-- },
 	{
 		"nvim-treesitter/nvim-treesitter",
 		opts = {
@@ -77,9 +52,6 @@ local plugins = {
 		},
 	},
 
-	-- ["williamboman/mason.nvim"] = {
-	-- 	override_options = overrides.mason,
-	-- },
 	{
 		"williamboman/mason.nvim",
 		opts = {
@@ -110,21 +82,6 @@ local plugins = {
 		},
 	},
 
-	-- ["hrsh7th/nvim-cmp"] = {
-	-- 	opts = overrides.cmp,
-	-- },
-	-- {
-	-- 	"hrsh7th/nvim-cmp",
-	-- 	opts = overrides.cmp,
-	-- },
-
-	-- Install a plugin
-	-- ["max397574/better-escape.nvim"] = {
-	-- 	event = "InsertEnter",
-	-- 	config = function()
-	-- 		require("better_escape").setup()
-	-- 	end,
-	-- },
 	{
 		"max397574/better-escape.nvim",
 		event = "InsertEnter",
@@ -133,13 +90,6 @@ local plugins = {
 		end,
 	},
 
-	-- code formatting, linting etc
-	-- ["jose-elias-alvarez/null-ls.nvim"] = {
-	-- 	after = "nvim-lspconfig",
-	-- 	config = function()
-	-- 		require("custom.plugins.null-ls")
-	-- 	end,
-	-- },
 	{
 		"jose-elias-alvarez/null-ls.nvim",
 		after = "nvim-lspconfig",
@@ -149,24 +99,9 @@ local plugins = {
 		end,
 	},
 
-	-- ["alexghergh/nvim-tmux-navigation"] = {
-	-- 	config = function()
-	-- 		local nvim_tmux_nav = require("nvim-tmux-navigation")
-	--
-	-- 		nvim_tmux_nav.setup({
-	-- 			disable_when_zoomed = true, -- defaults to false
-	-- 		})
-	--
-	-- 		vim.keymap.set("n", "<C-h>", nvim_tmux_nav.NvimTmuxNavigateLeft)
-	-- 		vim.keymap.set("n", "<C-j>", nvim_tmux_nav.NvimTmuxNavigateDown)
-	-- 		vim.keymap.set("n", "<C-k>", nvim_tmux_nav.NvimTmuxNavigateUp)
-	-- 		vim.keymap.set("n", "<C-l>", nvim_tmux_nav.NvimTmuxNavigateRight)
-	-- 		vim.keymap.set("n", "<C-\\>", nvim_tmux_nav.NvimTmuxNavigateLastActive)
-	-- 		vim.keymap.set("n", "<C-Space>", nvim_tmux_nav.NvimTmuxNavigateNext)
-	-- 	end,
-	-- },
 	{
 		"alexghergh/nvim-tmux-navigation",
+		lazy = false,
 		config = function()
 			local nvim_tmux_nav = require("nvim-tmux-navigation")
 
@@ -183,14 +118,6 @@ local plugins = {
 		end,
 	},
 
-	-- ["hashicorp/terraform-ls"] = {
-	-- 	config = function()
-	-- 		vim.api.nvim_create_autocmd({ "BufWritePre" }, {
-	-- 			pattern = { "*.tf", "*.tfvars" },
-	-- 			callback = vim.lsp.buf.format,
-	-- 		})
-	-- 	end,
-	-- },
 	{
 		"hashicorp/terraform-ls",
 		config = function()
@@ -201,25 +128,6 @@ local plugins = {
 		end,
 	},
 
-	-- ["zbirenbaum/copilot.lua"] = {
-	-- 	event = "VimEnter",
-	-- 	config = function()
-	-- 		vim.defer_fn(function()
-	-- 			require("copilot").setup({
-	-- 				suggestion = {
-	-- 					auto_trigger = true,
-	-- 					keymap = {
-	-- 						accept = "<Tab>",
-	-- 					},
-	-- 				},
-	-- 				cmp = {
-	-- 					enabled = true,
-	-- 					method = "getCompletionsCycling",
-	-- 				},
-	-- 			})
-	-- 		end, 100)
-	-- 	end,
-	-- },
 	{
 		"zbirenbaum/copilot.lua",
 		event = "VimEnter",
@@ -241,12 +149,6 @@ local plugins = {
 		end,
 	},
 
-	-- ["zbirenbaum/copilot-cmp"] = {
-	-- 	after = { "copilot.lua" },
-	-- 	config = function()
-	-- 		require("copilot_cmp").setup()
-	-- 	end,
-	-- },
 	{
 		"zbirenbaum/copilot-cmp",
 		after = { "copilot.lua" },
@@ -255,13 +157,6 @@ local plugins = {
 		end,
 	},
 
-	-- ["tanvirtin/vgit.nvim"] = {
-	-- 	after = { "nvim-web-devicons" },
-	-- 	requires = { "nvim-lua/plenary.nvim" },
-	-- 	config = function()
-	-- 		require("vgit").setup()
-	-- 	end,
-	-- },
 	{
 		"tanvirtin/vgit.nvim",
 		after = { "nvim-web-devicons" },
@@ -271,19 +166,6 @@ local plugins = {
 		end,
 	},
 
-	-- ["iamcco/markdown-preview.nvim"] = {
-	-- 	run = "cd app && yarn install",
-	-- 	ft = { "markdown" },
-	-- 	cmd = { "MarkdownPreview" },
-	-- 	config = function()
-	-- 		vim.g.mkdp_auto_refresh = 1
-	-- 		vim.g.mkdp_refresh_slow = 1
-	-- 		vim.g.mkdp_command_for_global = 0
-	-- 		vim.g.mkdp_echo_preview_url = 1
-	-- 		vim.g.mkdp_port = 7777
-	-- 		vim.g.mkdp_filetypes = { "markdown" }
-	-- 	end,
-	-- },
 	{
 		"iamcco/markdown-preview.nvim",
 		cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
@@ -299,13 +181,10 @@ local plugins = {
 		ft = { "markdown" },
 	},
 
-	-- ["tpope/vim-fugitive"] = {},
 	{
 		"tpope/vim-fugitive",
 	},
 
-	-- remove plugin
-	-- ["hrsh7th/cmp-path"] = false,
 	{
 		"hrsh7th/cmp-path",
 		enabled = false,

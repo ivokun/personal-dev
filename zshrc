@@ -113,6 +113,7 @@ export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
 export LANG=en_US.UTF-8 LC_CTYPE=en_US.UTF-8
 export LC_ALL="en_US.UTF-8"
+export TERM="xterm-256color"
 # Activates tmux session by default
 # tmux attach &> /dev/null
 #

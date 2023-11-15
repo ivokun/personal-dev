@@ -8,13 +8,13 @@ M.ui = {
 	theme = "gruvbox_light",
 	theme_toggle = { "gruvbox", "gruvbox_light" },
 
-	hl_override = highlights.override,
+	-- hl_override = highlights.override,
 	hl_add = highlights.add,
 }
 
 M.plugins = "custom.plugins"
 
 -- check core.mappings for table structure
-M.mappings = require "custom.mappings"
+M.mappings = require("custom.mappings")
 
 return M
