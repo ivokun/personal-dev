@@ -51,6 +51,21 @@ local plugins = {
 			},
 		},
 	},
+	{
+		"nvim-tree/nvim-tree.lua",
+		opts = {
+			view = {
+				width = 20,
+				side = "right",
+				preserve_window_proportions = false,
+			},
+			renderer = {
+				indent_markers = {
+					enable = false,
+				},
+			},
+		},
+	},
 
 	{
 		"williamboman/mason.nvim",
