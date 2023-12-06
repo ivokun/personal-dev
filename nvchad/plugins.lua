@@ -174,6 +174,7 @@ local plugins = {
 
 	{
 		"tanvirtin/vgit.nvim",
+		lazy = false,
 		after = { "nvim-web-devicons" },
 		requires = { "nvim-lua/plenary.nvim" },
 		config = function()
