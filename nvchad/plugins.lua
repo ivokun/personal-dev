@@ -149,6 +149,9 @@ local plugins = {
 		config = function()
 			vim.defer_fn(function()
 				require("copilot").setup({
+					filetypes = {
+						markdown = true,
+					},
 					suggestion = {
 						auto_trigger = true,
 						keymap = {
