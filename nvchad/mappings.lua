@@ -14,6 +14,7 @@ M.general = {
 				require("base46").toggle_theme()
 			end,
 		},
+		["<leader>lg"] = { "<Cmd>LazyGit<Cr>", "Open LazyGit" },
 	},
 }
 
