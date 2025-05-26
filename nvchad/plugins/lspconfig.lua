@@ -4,7 +4,8 @@ local capabilities = require("plugins.configs.lspconfig").capabilities
 local lspconfig = require("lspconfig")
 
 local servers = {
-  "lua_ls",
+	"biome",
+	"lua_ls",
 	"html",
 	"cssls",
 	"tsserver",
