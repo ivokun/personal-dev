@@ -132,3 +132,12 @@ export NVM_DIR="$HOME/.nvm"
 export PNPM_HOME="/home/ivokun/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
+export PATH="/home/$USER/.local/bin:$PATH"
+export PATH="$PATH:/opt/nvim-linux64/bin"
+
+
+# sst
+export PATH=/home/ivokun/.sst/bin:$PATH
+
+# opencode
+export PATH=/home/ivokun/.opencode/bin:$PATH
