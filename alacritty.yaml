@@ -35,7 +35,7 @@ colors:
 font:
   normal:
     family: "FantasqueSansM Nerd Font"
-  size: 12.5
+  size: 14
 
 key_bindings:
   - { key: A, mods: Alt, chars: "\x1ba" }
