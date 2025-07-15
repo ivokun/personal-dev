@@ -141,3 +141,9 @@ export PATH=/home/ivokun/.sst/bin:$PATH
 
 # opencode
 export PATH=/home/ivokun/.opencode/bin:$PATH
+
+export GDK_BACKEND=wayland
+export QT_QPA_PLATFORM=wayland
+export OZONE_PLATFORM=wayland
+export MOZ_ENABLE_WAYLAND=1
+export PATH=$HOME/Qt-6.8.3/bin:$PATH
